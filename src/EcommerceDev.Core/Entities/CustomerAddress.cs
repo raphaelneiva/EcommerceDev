@@ -2,8 +2,10 @@
 {
     public class CustomerAddress : BaseEntity
     {
-        public CustomerAddress(string addressLine1, string? addressLine2, int zipCode, string district, string city, string state, string country)
+        public CustomerAddress(Guid idCustomer, string recipientName, string addressLine1, string? addressLine2, int zipCode, string district, string city, string state, string country)
         {
+            IdCustomer = idCustomer;
+            RecipientName = recipientName;
             AddressLine1 = addressLine1;
             AddressLine2 = addressLine2;
             ZipCode = zipCode;
@@ -13,6 +15,8 @@
             Country = country;
         }
 
+        public Guid IdCustomer { get; set; }
+        public string RecipientName { get; set; }
         public string AddressLine1 { get; set; }
         public string? AddressLine2 { get; set; }
         public int ZipCode { get; set; }
