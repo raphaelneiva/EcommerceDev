@@ -2,14 +2,14 @@
 {
     public class Product : BaseEntity
     {
-        public Product(string title, string description, string price, string brand, int quantity, ProductCategory category)
+        public Product(string title, string description, string price, string brand, int quantity, Guid idCategory)
         {
             Title = title;
             Description = description;
             Price = price;
             Brand = brand;
             Quantity = quantity;
-            Category = category;
+            IdCategory = idCategory;
         }
 
         public string Title { get; set; }
@@ -21,6 +21,8 @@
         public string Brand { get; set; }
 
         public int Quantity { get; set; }
+
+        public Guid IdCategory { get; set; }
 
         public ProductCategory Category { get; set; }
     }
