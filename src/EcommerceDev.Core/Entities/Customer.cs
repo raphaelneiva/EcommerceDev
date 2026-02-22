@@ -23,5 +23,7 @@
         public string Document { get; set; }
 
         public List<CustomerAddress> Addresses { get; set; }
+
+        public List<Order> Orders { get; set; }
     }
 }

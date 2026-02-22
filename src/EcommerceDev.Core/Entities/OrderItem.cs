@@ -11,6 +11,7 @@
         }
 
         public Guid IdProduct { get; set; }
+        public  Product Product { get; set; }
         public Guid IdOrder { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }

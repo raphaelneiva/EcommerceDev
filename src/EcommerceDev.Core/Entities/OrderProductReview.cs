@@ -13,6 +13,7 @@
 
         public Guid IdOrderItem { get; set; }
         public Guid IdCustomer { get; set; }
+        public Customer Customer { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public int Score { get; set; }

@@ -18,6 +18,7 @@ namespace EcommerceDev.Core.Entities
         }
 
         public Guid IdCustomer { get; set; }
+        public Customer Customer { get; set; }
         public DateTime? ConfirmationDate { get; set; }
         public DateTime? ShippingDate { get; set; }
         public OrderStatus Status { get; set; }
