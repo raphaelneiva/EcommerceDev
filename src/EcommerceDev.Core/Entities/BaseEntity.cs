@@ -1,17 +1,9 @@
-﻿namespace EcommerceDev.Core.Entities
-{
-    public abstract class BaseEntity
-    {
-        public BaseEntity()
-        {
-            Id = Guid.NewGuid();
-            CreatedAt = DateTime.UtcNow;
-            IsDeleted = false;
-        }
+namespace EcommerceDev.Core.Entities;
 
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
-        public bool IsDeleted { get; set; }
-    }
+public abstract class BaseEntity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime? UpdatedAt { get; set; }
+    public bool IsDeleted { get; set; } = false;
 }

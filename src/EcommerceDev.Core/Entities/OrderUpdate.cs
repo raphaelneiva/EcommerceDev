@@ -1,8 +1,14 @@
-﻿namespace EcommerceDev.Core.Entities
+namespace EcommerceDev.Core.Entities;
+
+public class OrderUpdate : BaseEntity
 {
-    public class OrderUpdate : BaseEntity
+    protected OrderUpdate(){}
+    public OrderUpdate(string description, Guid idOrder)
     {
-        public string Description { get; set; }
-        public Guid IdOrder { get; set; }
+        Description = description;
+        IdOrder = idOrder;
     }
+
+    public string Description { get; set; }
+    public Guid IdOrder { get; set; }
 }
