@@ -1,29 +1,25 @@
-﻿namespace EcommerceDev.Core.Entities
+namespace EcommerceDev.Core.Entities;
+
+public class Customer : BaseEntity
 {
-    public class Customer : BaseEntity
+    protected Customer(){}
+    public Customer(string fullName, string email, string phoneNumber, DateTime birthDate, string document)
     {
-        public Customer(string fullName, string email, string phoneNumber, DateTime birthDate, string document)
-        {
-            FullName = fullName;
-            Email = email;
-            PhoneNumber = phoneNumber;
-            BirthDate = birthDate;
-            Document = document;
-            Addresses = [];
-        }
+        FullName = fullName;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        BirthDate = birthDate;
+        Document = document;
 
-        public string FullName { get; set; }
-
-        public string Email { get; set; }
-
-        public string PhoneNumber { get; set; }
-
-        public DateTime BirthDate { get; set; }
-
-        public string Document { get; set; }
-
-        public List<CustomerAddress> Addresses { get; set; }
-
-        public List<Order> Orders { get; set; }
+        Addresses = [];
     }
+
+    public string FullName { get; set; }
+    public string Email { get; set; }
+    public string PhoneNumber { get; set; }
+    public DateTime BirthDate { get; set; }
+    public string Document { get; set; }
+    public List<CustomerAddress> Addresses { get; set; }
+    public List<Order> Orders { get; set; }
+    public List<OrderItemReview> Reviews { get; set; }
 }
